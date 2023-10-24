@@ -18,6 +18,7 @@ to w3schools for Python and Pandas libs for Pandas.
 ### List
 
 ##### append()
+[Official Docs](https://www.w3schools.com/python/ref_list_append.asp)
 
 The append function adds a variable to a list. 
 
