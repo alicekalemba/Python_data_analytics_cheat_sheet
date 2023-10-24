@@ -40,5 +40,38 @@ print (my_list)
 _output:_
 `["a", "b", "c", "d"]`
 
+### Core
+
+#### enumerate()
+[Official Docs](https://www.w3schools.com/python/ref_func_enumerate.asp)
+
+The enumerate function is among then inbuilt functions that adds a counter to an iterable and returns an iterator(turple) in the format `index, element`
+
+_Example 1_
+```fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+```
+_output:_
+```
+0 apple
+1 banana
+2 cherry
+```
+
+_Example 2_
+Incase you want the counter to start with a different value
+```fruits = ["apple", "banana", "cherry"]
+for index, fruit in enumerator(fruits, start=1):
+    print(index, fruit)
+```
+_output_
+
+```
+1 apple
+2 banana
+3 cherry
+```
+
 
 
