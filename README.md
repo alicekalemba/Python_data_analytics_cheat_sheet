@@ -45,7 +45,7 @@ _output:_
 #### enumerate()
 [Official Docs](https://www.w3schools.com/python/ref_func_enumerate.asp)
 
-The enumerate function is among then inbuilt function that adds a counter to an iterableand returns an iterator(turple) in the format `index, element`
+The enumerate function is among then inbuilt functions that adds a counter to an iterable and returns an iterator(turple) in the format `index, element`
 
 _Example 1_
 ```fruits = ["apple", "banana", "cherry"]
