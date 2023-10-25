@@ -21,7 +21,8 @@ to w3schools for Python and Pandas libs for Pandas.
 #### enumerate()
 [Official Docs](https://www.w3schools.com/python/ref_func_enumerate.asp)
 
-The enumerate function is among then inbuilt functions that adds a counter to an iterable and returns an iterator(turple) in the format `index, element`
+The enumerate function is among then inbuilt functions that adds a counter to 
+an iterable and returns an iterator(turple) in the format `index, element`
 
 _Example 1_
 
@@ -57,7 +58,9 @@ _output_
 ##### join()
 
 [Official Docs](https://www.w3schools.com/python/ref_string_join.asp)
-The join function is a string method that returns a string in which the elements of a sequence have been joined by a specified delimiter. Its also called a delimiter string.
+The join function is a string method that returns a string in which the elements 
+of a sequence have been joined by a specified delimiter. Its also called a 
+delimiter string.
 
 _Example 1_
 ```
