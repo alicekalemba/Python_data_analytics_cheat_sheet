@@ -40,5 +40,40 @@ print (my_list)
 _output:_
 `["a", "b", "c", "d"]`
 
+##### join()
+[Official Docs](https://www.w3schools.com/python/ref_string_join.asp)
+
+The join function is a string method that returns a string in which the elements of a sequence have been joined by a specified delimiter. Its also called a delimiter string.
+
+_Example 1_
+```
+words = ["Hello", "world"]
+result = ' '.join(words)
+print(result)
+```
+_output:_
+`Hello world`
+
+_Example 2_
+```
+words = ["apple", "banana", "cherry"]
+result = ', '.join(words)
+print(result)
+```
+_output:_
+`apple, banana, cherry`
+
+_Example 3_
+```
+lines = ["Line 1", "Line 2", "Line 3"]
+result = '\n'.join(lines)
+print(result)
+```
+_output:_
+```
+Line 1
+Line 2
+Line 3
+```
 
 
