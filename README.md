@@ -127,3 +127,49 @@ _output:_
 `["a", "b", "c", "d"]`
 
 
+### Pandas
+
+
+#### describe()
+[Official Docs](https://www.w3schools.com/python/pandas/ref_df_describe.asp#:~:text=The%20describe()%20method%20returns,The%20average%20(mean)%20value.)
+
+
+The describe() its a pandas datafram and a method that provides descriptive
+statistics that summarize the central
+tendency, dispersion, and shape of a dataset’s distribution, excluding NaN
+values. It is used mostly in Machine learning, it basically returnd the
+description in the dataframe.
+
+
+_Example 1_
+
+
+```
+data = {
+'TransactionID': [1, 2, 3, 4, 5],
+'StoreLocation': ['New York', 'Los Angeles', 'New York', 'Chicago', 'Los Angeles'],
+'Date': ['2021-01-01', '2021-01-02', '2021-01-02', '2021-01-02', '2021-01-03'],
+'ItemCategory': ['Electronics', 'Apparel', 'Toys', 'Electronics', 'Apparel'],
+'UnitPrice': [299.99, 49.99, 15.99, 199.99, 39.99],
+'UnitsSold': [3, 5, 10, 1, 2]
+}
+df = pd.DataFrame(data)
+print(df[['UnitPrice', 'UnitsSold']].describe())
+```
+
+
+_output_
+
+
+`UnitPrice UnitsSold
+count 5.000000 5.000000
+mean 121.190000 4.200000
+std 123.398541 3.563706
+min 15.990000 1.000000
+25% 39.990000 2.000000
+50% 49.990000 3.000000
+75% 199.990000 5.000000
+max 299.990000 10.000000`
+
+
+
