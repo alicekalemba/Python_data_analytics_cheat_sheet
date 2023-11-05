@@ -127,7 +127,7 @@ _output:_
 `["a", "b", "c", "d"]`
 
 
-### Pandas
+### Pandas dataframe
 
 
 #### describe()
