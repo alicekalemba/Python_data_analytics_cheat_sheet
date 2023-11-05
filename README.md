@@ -134,7 +134,7 @@ _output:_
 [Official Docs](https://www.w3schools.com/python/pandas/ref_df_describe.asp#:~:text=The%20describe()%20method%20returns,The%20average%20(mean)%20value.)
 
 
-The describe() its a pandas datafram and a method that provides descriptive
+The describe() its a pandas dataframe and a method that provides descriptive
 statistics that summarize the central
 tendency, dispersion, and shape of a dataset’s distribution, excluding NaN
 values. It is used mostly in Machine learning, it basically returnd the
