@@ -127,8 +127,7 @@ _output:_
 `["a", "b", "c", "d"]`
 
 
-### Pandas dataframe
-
+### Pandas class
 #### read_csv()
 [Official Docs] (https://www.w3schools.com/python/pandas/pandas_csv.asp)
 
@@ -139,19 +138,19 @@ Used as;
 
 `import pandas as pd`
 
-`df = pd.read_csv('customer_data.csv')`
+df = `pd.read_csv('customer_data.csv')`
 
-pd.read_csv is the function.
-customer_data.csv' is the file you are importing. 
+`pd.read_csv` is the function.
+
+`customer_data.csv` is the file you are importing. 
 
 
+### Pandas dataframe
 #### describe()
 [Official Docs](https://www.w3schools.com/python/pandas/ref_df_describe.asp#:~:text=The%20describe()%20method%20returns,The%20average%20(mean)%20value.)
 
 
-The `describe()` is a method/function that provides descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset’s distribution, excluding NaN values. It is used mostly in Machine learning, it basically returns the
-description of the dataframe.
-
+The `describe()` is a method/function that provides descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset’s distribution, excluding NaN values. It is used mostly in Machine Learning, basically returns the description of the dataframe.
 
 _Example 1_
 
