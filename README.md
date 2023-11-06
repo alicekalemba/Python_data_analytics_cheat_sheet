@@ -129,20 +129,31 @@ _output:_
 
 ### Pandas dataframe
 
+#### read_csv()
+[Official Docs] (https://www.w3schools.com/python/pandas/pandas_csv.asp)
+
+This is one of the most used functions in pandas for reading data into a dataframe. The csv stands for comma-separated values.
+The csv files are the most common import and export format for spreadsheets and databases.
+
+Used as;
+
+`import pandas as pd`
+
+`df = pd.read_csv('customer_data.csv')`
+
+pd.read_csv is the function.
+customer_data.csv' is the file you are importing. 
+
 
 #### describe()
 [Official Docs](https://www.w3schools.com/python/pandas/ref_df_describe.asp#:~:text=The%20describe()%20method%20returns,The%20average%20(mean)%20value.)
 
 
-The describe() its a pandas dataframe and a method that provides descriptive
-statistics that summarize the central
-tendency, dispersion, and shape of a dataset’s distribution, excluding NaN
-values. It is used mostly in Machine learning, it basically returnd the
-description in the dataframe.
+The `describe()` is a method/function that provides descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset’s distribution, excluding NaN values. It is used mostly in Machine learning, it basically returns the
+description of the dataframe.
 
 
 _Example 1_
-
 
 ```
 data = {
@@ -157,11 +168,10 @@ df = pd.DataFrame(data)
 print(df[['UnitPrice', 'UnitsSold']].describe())
 ```
 
-
 _output_
 
+`UnitPrice   UnitsSold
 
-`UnitPrice UnitsSold
 count 5.000000 5.000000
 mean 121.190000 4.200000
 std 123.398541 3.563706
@@ -171,5 +181,5 @@ min 15.990000 1.000000
 75% 199.990000 5.000000
 max 299.990000 10.000000`
 
-
-
+The `mean` is the average value of the dataset. It is calculated by summing up all the values in a data set and then dividing by the number of values. In the context of the example provided earlier where we calculated the summary statistics for 'UnitPrice' and 'UnitsSold' using `describe()`, the mean tells us the average unit price and average number of units sold across all transactions in our sample dataset.
+It is used for example in comparative analysis, benchmarking among others, for example, if a particular transaction has a much higher unit price than the mean, it could be considered an outlier.
