@@ -182,3 +182,124 @@ max 299.990000 10.000000`
 
 The `mean` is the average value of the dataset. It is calculated by summing up all the values in a data set and then dividing by the number of values. In the context of the example provided earlier where we calculated the summary statistics for 'UnitPrice' and 'UnitsSold' using `describe()`, the mean tells us the average unit price and average number of units sold across all transactions in our sample dataset.
 It is used for example in comparative analysis, benchmarking among others, for example, if a particular transaction has a much higher unit price than the mean, it could be considered an outlier.
+
+### Merge()
+
+[Official Docs] (https://www.w3schools.com/python/pandas/ref_df_merge.asp)
+
+The merge() method allows you to merge DataFrame objects by aligning them on columns.
+The merge() function with `how='inner'` performs an inner join operation, which is the default mode for the merge() function in pandas. An inner join results in a DataFrame that contains only the rows that have matching values in both the left and right DataFrames as seen in example 1.
+The merge() function with `how='left'` performs a left join operation between two DataFrames. A left join means that the resulting DataFrame will have all the rows from the left DataFrame as seen in example 2.
+The merge() function with `how='outer'` join produces a DataFrame that includes all rows from both the left and right DataFrames, matching up rows where possible. Where there is no match for a particular key in one DataFrame, the result will have NaN in the columns as seen in Example3.
+The merge() function with `how='right'` performs a right join on two DataFrames. This is almost like the left join only that this one prioritizes the right column first as seen in Example4.
+
+_Example1_
+
+```
+import pandas as pd
+
+# DataFrame of customers
+customers = pd.DataFrame({
+    'customer_id': [1, 2, 3],
+    'customer_name': ['Alice', 'Bob', 'Charlie']
+})
+
+# DataFrame of orders
+orders = pd.DataFrame({
+    'customer_id': [1, 2, 4],
+    'order_id': [100, 101, 102]
+})
+
+# Merge DataFrames on customer_id
+customers_orders = pd.merge(customers, orders, on='customer_id', how='inner')
+
+customers_orders.head()
+```
+_Output_
+```customer_id customer_name  order_id
+0            1         Alice       100
+1            2           Bob       101
+```
+_Example2_
+
+```import pandas as pd
+
+# DataFrame of customers
+customers = pd.DataFrame({
+    'customer_id': [1, 2, 3],
+    'customer_name': ['Alice', 'Bob', 'Charlie']
+})
+
+# DataFrame of orders
+orders = pd.DataFrame({
+    'customer_id': [1, 2, 4],
+    'order_id': [100, 101, 102]
+})
+
+# Merge DataFrames on customer_id
+merged_df = pd.merge(customers, orders, on='customer_id', how='left')
+
+print(merged_df)
+```
+_Output_
+
+```customer_id customer_name  order_id
+0            1         Alice     100.0
+1            2           Bob     101.0
+2            3       Charlie       NaN
+```
+
+_Example3_
+```import pandas as pd
+
+# DataFrame of customers
+customers = pd.DataFrame({
+    'customer_id': [1, 2, 3],
+    'customer_name': ['Alice', 'Bob', 'Charlie']
+})
+
+# DataFrame of orders
+orders = pd.DataFrame({
+    'customer_id': [1, 2, 4],
+    'order_id': [100, 101, 102]
+})
+
+# Merge DataFrames on customer_id
+customers_orders = pd.merge(customers, orders, on='customer_id', how='outer')
+
+customers_orders.head()
+```
+_Output_
+```	customer_id	customer_name	order_id
+0	1	Alice	100.0
+1	2	Bob	101.0
+2	3	Charlie	NaN
+3	4	NaN	102.0
+```
+_Example4_
+
+```import pandas as pd
+
+# DataFrame of customers
+customers = pd.DataFrame({
+    'customer_id': [1, 2, 3],
+    'customer_name': ['Alice', 'Bob', 'Charlie']
+})
+
+# DataFrame of orders
+orders = pd.DataFrame({
+    'customer_id': [1, 2, 4],
+    'order_id': [100, 101, 102]
+})
+
+# Merge DataFrames on customer_id
+customers_orders = pd.merge(customers, orders, on='customer_id', how='right')
+
+customers_orders.head()
+```
+_Output_
+```customer_id	customer_name	order_id
+0	1	Alice	100
+1	2	Bob	101
+2	4	NaN	102
+```
